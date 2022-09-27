@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/BDX.ECOMMERCE/Bdx.Model/bin/Debug/net6.0
+/BDX.ECOMMERCE/.vs/BDX.ECOMMERCE/v17
+/BDX.ECOMMERCE/Bdx.Model/obj
+/BDX.ECOMMERCE/Bdx.Test/bin/Debug/net6.0
+/BDX.ECOMMERCE/Bdx.Test/obj
