@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BDX.ECommerce.DTO
+namespace Bdx.ECommerce.Dto
 {
     public class Prodotto
     {

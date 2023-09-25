@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bdx.Model", "Bdx.Model\Bdx.Model.csproj", "{57D05DD8-4A09-456F-BF83-8E2AA8078813}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bdx.Model", "Bdx.Model\Bdx.Model.csproj", "{57D05DD8-4A09-456F-BF83-8E2AA8078813}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bdx.Test", "Bdx.Test\Bdx.Test.csproj", "{F2F9A37A-575B-48D8-8CEB-D0FE12FCFD65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bdx.Test", "Bdx.Test\Bdx.Test.csproj", "{F2F9A37A-575B-48D8-8CEB-D0FE12FCFD65}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

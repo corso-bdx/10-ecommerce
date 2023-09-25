@@ -1,19 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BDX.ECommerce;
+namespace Bdx.ECommerce;
 
-[Table("Utenti", Schema = "Bdx")]
-public class Utente
+[Table("Prodotti", Schema = "Bdx")]
+public class Prodotto
 {
     [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
 
-    public string Username { get; set; } = null!;
-
     public string Nome { get; set; } = null!;
 
-    public string Cognome { get; set; } = null!;
+    public int Quantita { get; set; }
 
     public List<Acquisto> Acquisti { get; set; } = new List<Acquisto>();
 }

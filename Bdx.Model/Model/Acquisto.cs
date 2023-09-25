@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BDX.ECommerce;
+namespace Bdx.ECommerce;
 
 [Table("Acquisti", Schema = "Bdx")]
 public class Acquisto

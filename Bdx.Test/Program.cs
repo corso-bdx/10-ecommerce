@@ -1,15 +1,14 @@
-﻿
-using BDX.ECommerce;
-using BDX.ECommerce.Repository;
+﻿using Bdx.ECommerce;
+using Bdx.ECommerce.Repository;
 using Microsoft.EntityFrameworkCore;
 
-var connectionstring = "Server=localhost\\SQLEXPRESS;Database=ECOMMERCE;Trusted_Connection=True";
+string connectionstring = "Server=localhost\\SQLEXPRESS;Database=ECOMMERCE;Trusted_Connection=True";
 
-var optionsBuilder = new DbContextOptionsBuilder<ECommerceDbContext>();
+DbContextOptionsBuilder<ECommerceDbContext> optionsBuilder = new DbContextOptionsBuilder<ECommerceDbContext>();
 optionsBuilder.UseSqlServer(connectionstring);
 
-using ECommerceRepository eCommerceRepository = new ECommerceRepository(new ECommerceDbContext(optionsBuilder.Options));
-
+using ECommerceDbContext eCommerceDbContext = new ECommerceDbContext(optionsBuilder.Options);
+ECommerceRepository eCommerceRepository = new ECommerceRepository(eCommerceDbContext);
 
 bool esci = false;
 
@@ -59,9 +58,9 @@ Dictionary<string, Action> operazioni = new Dictionary<string, Action>()
     ["cercaProdotto"] = () =>
     {
         string nome = ChiediParametro(1, "Nome: ");
-        List<BDX.ECommerce.DTO.Prodotto> ListaProdotto = eCommerceRepository.CercaProdotto_BonusDTO(nome);
+        List<Bdx.ECommerce.Dto.Prodotto> ListaProdotto = eCommerceRepository.CercaProdotto_BonusDto(nome);
 
-        foreach (var prodotto in ListaProdotto)
+        foreach (Bdx.ECommerce.Dto.Prodotto prodotto in ListaProdotto)
         {
             Console.WriteLine($"\t{prodotto.Id}: {prodotto.Nome} {prodotto.Quantita}");
         }
@@ -89,7 +88,7 @@ Dictionary<string, Action> operazioni = new Dictionary<string, Action>()
         string nome = ChiediParametro(1, "Nome: ");
         List<Prodotto> ListaProdotto = eCommerceRepository.CercaProdotto_Bonus(nome);
 
-        foreach (var prodotto in ListaProdotto)
+        foreach (Prodotto prodotto in ListaProdotto)
         {
             Console.WriteLine($"\t{prodotto.Id}: {prodotto.Nome} {prodotto.Quantita}");
         }
@@ -114,12 +113,12 @@ Dictionary<string, Action> operazioni = new Dictionary<string, Action>()
         WriteLineOK("Acquisto concluso correttamente");
     },
 
-    ["cercaProdottoBonusDTO"] = () =>
+    ["cercaProdottoBonusDto"] = () =>
     {
         string nome = ChiediParametro(1, "Nome: ");
-        List<BDX.ECommerce.DTO.Prodotto> ListaProdotto = eCommerceRepository.CercaProdotto_BonusDTO(nome);
+        List<Bdx.ECommerce.Dto.Prodotto> ListaProdotto = eCommerceRepository.CercaProdotto_BonusDto(nome);
 
-        foreach (var prodotto in ListaProdotto)
+        foreach (Bdx.ECommerce.Dto.Prodotto prodotto in ListaProdotto)
         {
             Console.WriteLine($"\t{prodotto.Id}: {prodotto.Nome} {prodotto.Quantita}");
         }
